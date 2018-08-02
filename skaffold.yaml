@@ -1,0 +1,14 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  artifacts:
+  - imageName: gcr.io/philde-testing-2/skaffold-test
+deploy:
+  kubectl:
+    manifests:
+      - deployment.yaml
+profiles:
+  - name: gcb
+    build:
+      googleCloudBuild:
+        projectId: philde-testing-2

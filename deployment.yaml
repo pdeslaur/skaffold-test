@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: gcr.io/philde-testing-2/skaffold-test
+        resources:
+        - cpu: 10m
+          memory: 10Mi
