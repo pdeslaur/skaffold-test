@@ -1,4 +1,4 @@
-FROM golang:1.10 as builder
+FROM gcr.io/cloud-builders/go as builder
 COPY main.go .
 RUN go build -o /app main.go
 
