@@ -3,6 +3,8 @@ kind: Config
 build:
   artifacts:
   - imageName: gcr.io/philde-testing-2/skaffold-test
+  tagPolicy:
+    dateTime: {}
 deploy:
   kubectl:
     manifests:
